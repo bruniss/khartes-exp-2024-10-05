@@ -1,6 +1,7 @@
 # khartes-exp-2024-10-05
  added autoseg on overlays 
 
+this repository extends khartes by adding auto extension/autoseg to existing segments by following a provided set of binary overlays. it computes a local region of connected components, gets all the pixels, and drives a line through them using interpolation. some bugs , not fully fleshed out. one major bug is tracking cursors cause crashes i have yet to track down. 
 
 to use it , set the overlay as the base volume and the raw data as the overlay, as in this screenshot. 
 
@@ -9,5 +10,8 @@ press (3) to extend left,
 press (4) to extend right, 
 press (5) to delete a node, 
 press tilde to reparameterize 
+
+
+
 
 ![alt text](image.png)
