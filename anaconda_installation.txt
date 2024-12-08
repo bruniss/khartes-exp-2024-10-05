@@ -1,0 +1,53 @@
+khartes is written in Python; it requires a number of 
+external modules.  Below are the Anaconda commands 
+I used in Windows to import the needed modules.  
+Probably the pip commands and module names are 
+similar, but I haven't tested them.  
+
+One possibly unfamiliar package is pynrrd, 
+which implements (in pure python) the NRRD format 
+(Nearly Raw Raster Data).  This format consists 
+of an ascii header followed by binary raster data;
+khartes uses this format for storing data volumes.
+
+Another unusual package is rectpack, which is
+used for packing 2D rectangles in a minimum-size box.
+It is called when exporting textures in the export-mesh
+function.
+
+User hari_seldon has informed me that the pip equivalent 
+of opencv is opencv-python-headless (Thanks hari!).
+
+The list below shows how to install modules from the
+default conda repository.  
+
+conda create -n khartes
+conda activate khartes
+conda install opencv
+conda install pyqt
+conda install tifffile
+conda install zarr
+conda install scipy
+conda install pyopengl
+conda install requests
+conda install aiohttp
+conda install fsspec
+conda install cmap
+conda install -c conda-forge pynrrd
+conda install -c conda-forge rectpack
+
+If you want to live on the bleeding edge, you can
+install the conda-forge versions of all these packages.
+
+Alternatively, you can create a new environment and install all dependencies:
+
+conda env create -f environment.yml
+
+Once finished, you can activate the environment and run Khartes:
+
+conda activate khartes
+python khartes.py
+
+And to exit the environment run:
+
+conda deactivate
