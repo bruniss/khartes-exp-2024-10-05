@@ -13,6 +13,9 @@ press (4) to extend right,
 press (5) to delete a node, 
 press tilde to reparameterize 
 
+fork of @khartes_chuck khartes branch here https://github.com/KhartesViewer/khartes/tree/exp-2024-10-05 
+
+i did not fork it correctly and cant figure out how to fix it.
 
 
 
